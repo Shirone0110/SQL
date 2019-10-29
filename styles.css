@@ -9,18 +9,26 @@ h1
     color: red;
 }
 
-td
+td, th
 {
     font-size: 20px;
     border: 1px solid #000000;
+    width: 200px;
+    text-align: center;
     padding: 10px;
     background-color: #ffffb3;
+}
+
+th
+{
+    font-weight: bold;
 }
 
 table
 {
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #describe
