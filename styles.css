@@ -1,0 +1,46 @@
+body
+{
+    font-size: 20px;
+}
+
+h1
+{
+    text-align: center;
+    color: red;
+}
+
+td
+{
+    font-size: 20px;
+    border: 1px solid #000000;
+    padding: 10px;
+    background-color: #ffffb3;
+}
+
+table
+{
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#describe
+{
+    border-radius: 10px;
+    background-color: #ccebff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#ex
+{
+    border-radius: 10px;
+    background-color: #ffb3b3;
+    padding: 10px;
+}
+
+#def
+{
+    border-radius: 10px;
+    background-color: #b3ffcc;
+    padding: 10px;
+}

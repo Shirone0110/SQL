@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <link href="styles.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Inner Join</h1>
+        <div id="describe">
+            INNER JOIN is a function that will return the intersection between tables using the condition we give to the function.
+            <br />
+            Below is the syntax for INNER JOIN:
+            <br />
+            <pre>
+                SELECT &lt;column(s) name for new table&gt; <br />
+                FROM &lt;table 1 name&gt; <br />
+                INNER JOIN &lt;table 2 name&gt; <br />
+                ON &lt;condition&gt; <br />
+            </pre>
+            We can find the intersection between 3 or more tables by using nested INNER JOIN:
+            <br />
+            <pre>
+                SELECT &lt;column(s) name for new table&gt; <br />
+                FROM (((&lt;table 1 name&gt; <br />
+                INNER JOIN &lt;table 2 name&gt;) <br />
+                INNER JOIN &lt;table 3 name&gt;) <br />
+                INNER JOIN ...) <br />
+                ON &lt;condition&gt; <br />
+            </pre>
+            We use INNER JOIN when we want to merge two data sets that are related to each other through a variable.
+        </div>
+        <div id="ex">
+            For example, we have 2 tables, Mealplan and Name:
+            <table>
+                <tbody>
+                    <tr>
+                        <td>StudentID</td>
+                        <td>MealPlan</td>
+                    </tr>
+                    <tr>
+                        <td>000001</td>
+                        <td>10 meals</td>
+                    </tr>
+                    <tr>
+                        <td>000002</td>
+                        <td>7 meals</td>
+                    </tr>
+                    <tr>
+                        <td>000003</td>
+                        <td>14 meals</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>StudentID</td>
+                        <td>StudentName</td>
+                    </tr>
+                    <tr>
+                        <td>000001</td>
+                        <td>Andy</td>
+                    </tr>
+                    <tr>
+                        <td>000002</td>
+                        <td>Bob</td>
+                    </tr>
+                    <tr>
+                        <td>000003</td>
+                        <td>Charlie</td>
+                    </tr>
+                </tbody>
+            </table>
+            and we use the INNER JOIN:
+            <pre>
+                SELECT Mealplan.MealPlan, Name.StudentName <br />
+                FROM Mealplan <br />
+                INNER JOIN Name<br />
+                ON Mealplan.StudentID = Name.StudentID <br />
+            </pre>
+            and we will have this:
+            <table>
+                <tbody>
+                    <tr>
+                        <td>MealPlan</td>
+                        <td>StudentName</td>
+                    </tr>
+                    <tr>
+                        <td>10 meals</td>
+                        <td>Andy</td>
+                    </tr>
+                    <tr>
+                        <td>7 meals</td>
+                        <td>Bob</td>
+                    </tr>
+                    <tr>
+                        <td>14 meals</td>
+                        <td>Charlie</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h1>Data Scientist</h1>
+        <div id="def">
+            <h3>What is a data scientist?</h3>
+            First, a data scientist is a scientist. And scientist makes hypothesis, carry out experiments and then discover new things. Like chemist deals with chemicals, data scientist deals with data. 
+            
+            <h3>How do they do that?</h3>
+            Data scientist are just human. They can't look at numbers and then come to some conclusion about a bunch of numbers. First they will gather all the data, and then use algorithms to integrate that data, or create visualizations to see the trend. To do this, they need a strong foundation in mathematics, statistics, computer science,...
+            
+            <h3>Data scientist vs. Computer scientist</h3>
+            A data scientist and a computer scientist have many things in common. They both have to know about algorithms and programming language. But while computer scientist answers the question <b>what</b> is the result, data scientist answers the question <b>why</b> is the result like this. Therefore, data scientists need more knowledge in algorithms and tools that are highly data-oriented such as machine learning or neural network.
+            <br />
+            For example, if we were to make an application, a game for instance, a data scientist would tell what should the game include to attract the most people through a lot of analysis, and a computer scientist would create that game.
+        </div>
+    </body>
+</html>
